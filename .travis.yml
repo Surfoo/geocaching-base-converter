@@ -1,0 +1,11 @@
+language: node_js
+
+node_js:
+    - "node"
+
+after_success:
+    - codecov --disable=gcov
+
+cache:
+    directories:
+        - $HOME/.npm
