@@ -1,6 +1,8 @@
-# geocaching-base-converter [![Build Status](https://travis-ci.org/Surfoo/geocaching-base-converter.svg?branch=master)](https://travis-ci.org/Surfoo/geocaching-base-converter) [![codecov](https://codecov.io/gh/Surfoo/geocaching-base-converter/branch/master/graph/badge.svg)](https://codecov.io/gh/Surfoo/geocaching-base-converter)
+# geocaching-base-converter [![Build Status](https://travis-ci.org/Surfoo/geocaching-base-converter.svg?branch=master)](https://travis-ci.org/Surfoo/geocaching-base-converter)
 
 Encode or decode geocaching ID (base31 or base16)
+
+This package is available on npmjs.com: [geocaching-base-converter](https://www.npmjs.com/package/geocaching-base-converter)
 
 #### Includes characters
 
