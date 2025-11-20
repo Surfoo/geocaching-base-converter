@@ -16,7 +16,13 @@ const alphabetLookup = [...alphabet].reduce((lookup, char, index) => {
 }, {})
 
 const assertNonNegativeSafeInteger = (val) => {
-    if (typeof val !== "number" || isNaN(val) || val < 0 || val > Number.MAX_SAFE_INTEGER || Math.floor(val) !== val) {
+    if (
+        typeof val !== "number" ||
+        Number.isNaN(val) ||
+        val < 0 ||
+        val > Number.MAX_SAFE_INTEGER ||
+        Math.floor(val) !== val
+    ) {
         throw new Error("Value passed is not a non-negative safe integer.")
     }
 }
@@ -29,7 +35,7 @@ const assertString = (str) => {
 
 const assertBase31Character = (character) => {
     if (typeof alphabetLookup[character] === "undefined") {
-        throw new Error("Value '" + character + "' passed is not a valid Base31 string.")
+        throw new Error(`Value '${character}' passed is not a valid Base31 string.`)
     }
 }
 
@@ -38,7 +44,7 @@ export const encode = (number, prefix) => {
     assertString(prefix)
 
     if (number <= BASE16_MAX) {
-        return prefix + parseInt(number, 16)
+        return prefix + Number.parseInt(number, 16)
     }
 
     let str = ""
@@ -59,7 +65,7 @@ export const decode = (str) => {
     str = str.toUpperCase()
 
     if (str.substr(0, 2) === "GC") {
-        var replaceChars = { S: 5, O: 0 }
+        const replaceChars = { S: 5, O: 0 }
         str = str.replace(/[SO]/g, (m) => replaceChars[m])
     }
 
@@ -73,10 +79,10 @@ export const decode = (str) => {
         return (
             [...str].reverse().reduce((num, character, index) => {
                 assertBase31Character(character)
-                return num + alphabetLookup[character] * Math.pow(base, index)
+                return num + alphabetLookup[character] * base ** index
             }, 0) - BASE31_MAGIC_NUMBER
         )
     }
 
-    return parseInt(str, 16)
+    return Number.parseInt(str, 16)
 }

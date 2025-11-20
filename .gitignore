@@ -1,7 +1,2 @@
-# nyc test coverage
-.nyc_output
-
-# Dependency directories
-node_modules/
-
-.vscode
+.tap
+node_modules
