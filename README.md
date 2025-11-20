@@ -1,4 +1,4 @@
-# geocaching-base-converter [![Build Status](https://travis-ci.org/Surfoo/geocaching-base-converter.svg?branch=master)](https://travis-ci.org/Surfoo/geocaching-base-converter)
+# geocaching-base-converter
 
 Encode or decode geocaching ID (base31 or base16)
 
