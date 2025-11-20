@@ -27,17 +27,9 @@ jobs:
     - name: Install dependencies
       run: npm ci
 
-    - name: Lint and format with Biome
+    - name: Check code quality with Biome
       run: |
-        npx @biomejs/biome check --write .
-
-    - name: Check for formatting changes
-      run: |
-        if [ -n "$(git status --porcelain)" ]; then
-          echo "Code formatting issues found. Please run 'npx @biomejs/biome format --write .'"
-          git diff
-          exit 1
-        fi
+        npx @biomejs/biome check .
 
     - name: Run tests
       run: npm test
