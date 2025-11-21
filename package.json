@@ -1,6 +1,6 @@
 {
     "name": "@surfoo/geocaching-base-converter",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "Geocaching base converter",
     "keywords": [
         "geocaching",
@@ -34,7 +34,7 @@
         "ci": "npm run check && npm test"
     },
     "devDependencies": {
-        "@biomejs/biome": "^2.3.6",
+        "@biomejs/biome": "^2.3.7",
         "tap": "^21.1"
     }
 }
