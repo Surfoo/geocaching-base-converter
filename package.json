@@ -1,5 +1,5 @@
 {
-    "name": "@surfoo/geocaching-base-converter",
+    "name": "geocaching-base-converter",
     "version": "1.0.4",
     "description": "Geocaching base converter",
     "keywords": [
