@@ -1,6 +1,7 @@
 {
-    "name": "geocaching-base-converter",
+    "name": "@surfoo/geocaching-base-converter",
     "version": "1.0.3",
+    "description": "Geocaching base converter",
     "keywords": [
         "geocaching",
         "geocode",
@@ -8,18 +9,20 @@
         "geocache",
         "base31"
     ],
-    "description": "Geocaching base converter",
-    "license": "MIT",
-    "author": "Surfoo",
+    "homepage": "https://github.com/surfoo/geocaching-base-converter#readme",
+    "bugs": {
+        "url": "https://github.com/surfoo/geocaching-base-converter/issues"
+    },
     "repository": {
         "type": "git",
-        "url": "https://github.com/surfoo/geocaching-base-converter.git"
+        "url": "git+https://github.com/surfoo/geocaching-base-converter.git"
     },
+    "license": "MIT",
+    "author": "Surfoo",
     "type": "module",
     "main": "index.js",
-    "devDependencies": {
-        "@biomejs/biome": "^2.3.6",
-        "tap": "^21.1"
+    "directories": {
+        "test": "test"
     },
     "scripts": {
         "test": "tap test/*.js",
@@ -29,5 +32,9 @@
         "format": "npx @biomejs/biome format --write .",
         "check": "npx @biomejs/biome check --write .",
         "ci": "npm run check && npm test"
+    },
+    "devDependencies": {
+        "@biomejs/biome": "^2.3.6",
+        "tap": "^21.1"
     }
 }
